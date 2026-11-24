@@ -1,0 +1,272 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+  <meta name="theme-color" content="#181814">
+  <meta name="description" content="Элемент Арно — внешний канал продаж для строительных компаний.">
+  <title>Элемент Арно — создаём пространство доверия</title>
+  <link rel="icon" type="image/svg+xml" href="favicon.svg">
+  <link rel="preload" as="image" href="hero.png">
+  <link rel="preload" as="audio" href="birds.mp3" type="audio/mpeg">
+  <link rel="preload" as="font" href="arno-logo-light.woff" type="font/woff" crossorigin>
+  <link rel="stylesheet" href="style.css?v=typography-20261123">
+  <link rel="stylesheet" href="sections.css?v=hero-hover-20261124">
+  <script src="main.js?v=sound-auto-20261124" defer></script>
+  <script src="water.js" defer></script>
+  <script src="sections.js" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#main-content">Перейти к содержанию</a>
+  <header class="site-header">
+    <a class="brand" href="#top" aria-label="Элемент Арно — наверх"><span class="brand-logo" aria-hidden="true"><span class="brand-word brand-element">ЭЛЕМЕНТ</span><span class="brand-symbol"></span><span class="brand-word brand-arno">АРНО</span></span></a>
+    <nav class="nav" aria-label="Навигация">
+      <a href="#about">О компании</a>
+      <a href="#benefits">Преимущества</a>
+      <a href="#service-section">Услуги</a>
+      <a href="#process">Концепция</a>
+      <a href="#cases">Кейсы</a>
+      <a href="#faq">Вопросы</a>
+    </nav>
+    <button class="menu-toggle" aria-label="Открыть меню" aria-expanded="false" aria-controls="mobile-menu"><span></span><span></span></button>
+  </header>
+  <nav class="mobile-menu" id="mobile-menu" aria-label="Мобильная навигация" hidden>
+    <a href="#about">О компании</a>
+    <a href="#benefits">Преимущества</a>
+    <a href="#service-section">Услуги</a>
+    <a href="#process">Концепция</a>
+    <a href="#cases">Кейсы</a>
+    <a href="#faq">Вопросы</a>
+  </nav>
+  <button class="sound-toggle" type="button" aria-pressed="false" aria-label="Включить пение птиц">
+    <span class="sound-icon" aria-hidden="true"><svg width="18" height="18" viewBox="0 0 24 24" fill="none"><path d="M4 10v4h3l4 3V7l-4 3H4Z" stroke="currentColor" stroke-width="1.4" stroke-linejoin="round"/><path class="sound-wave" d="M15 9a4 4 0 0 1 0 6m2-9a8 8 0 0 1 0 12" stroke="currentColor" stroke-width="1.3" stroke-linecap="round"/><path class="sound-muted" d="m15 10 4 4m0-4-4 4" stroke="currentColor" stroke-width="1.3" stroke-linecap="round"/></svg></span>
+    <span class="sound-label">ВКЛЮЧИТЬ ЗВУК</span>
+  </button>
+
+  <div class="nav-transition" id="nav-transition" aria-hidden="true"><span class="brand-logo nav-transition-brand"><span class="brand-word brand-element">ЭЛЕМЕНТ</span><span class="brand-symbol"></span><span class="brand-word brand-arno">АРНО</span></span><span class="nav-transition-title"></span></div>
+  <nav class="floating-actions" aria-label="Быстрые действия">
+    <a class="floating-action floating-phone" href="tel:+79027427832" aria-label="Позвонить" title="Позвонить"><svg aria-hidden="true" viewBox="0 0 24 24" fill="none"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6A19.79 19.79 0 0 1 2.12 4.2 2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92Z" stroke="currentColor" stroke-width="1.35" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+    <a class="floating-action floating-contact" href="https://t.me/nikita_a88" target="_blank" rel="noopener noreferrer" aria-label="Написать в Telegram" title="Написать в Telegram"><svg aria-hidden="true" viewBox="0 0 24 24" fill="none"><path d="M5.5 17.5 4.8 20l3.1-1.3a8.3 8.3 0 1 0-2.4-1.2Z" stroke="currentColor" stroke-width="1.35" stroke-linecap="round" stroke-linejoin="round"/><path d="M8.5 11.7h7M8.5 14.4h4.5" stroke="currentColor" stroke-width="1.2" stroke-linecap="round"/></svg></a>
+    <a class="floating-action back-to-top" href="#top" aria-label="Вернуться на главный экран" title="Наверх"><svg aria-hidden="true" viewBox="0 0 24 24" fill="none"><path d="M12 19V5m0 0L6.5 10.5M12 5l5.5 5.5" stroke="currentColor" stroke-width="1.35" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+  </nav>
+
+  <main id="main-content">
+    <div class="hero-spacer" id="top">
+      <section class="hero" aria-labelledby="hero-title">
+        <div class="hero-art" aria-hidden="true"><img id="hero-image" src="hero.png" alt=""><canvas id="water"></canvas><div class="light-wash"></div></div>
+        <div class="hero-shade" aria-hidden="true"></div>
+        <div class="hero-content">
+          <p class="eyebrow">ВНЕШНИЙ КАНАЛ ПРОДАЖ для строительных компаний</p>
+          <h1 id="hero-title"><span class="hero-heading-line">Вы воплощаете мечты</span> <span class="hero-heading-line">о доме</span> <span class="hero-heading-line hero-highlight">Мы помогаем находить тех,</span> <span class="hero-heading-line hero-highlight">кто о нём мечтает</span></h1>
+          <p class="hero-description"><span>Привлекаем и сопровождаем потенциальных заказчиков для строительных компаний.</span> <span>Рекламу финансируем из собственного бюджета.</span></p>
+          <div class="actions">
+            <a class="button button-primary hero-contact" href="tel:+79027427832"><span>Обсудить сотрудничество</span></a>
+          </div>
+        </div>
+        <div class="hero-bottom">
+          <span class="signature">СОЕДИНЯЯ ВОЗМОЖНОСТИ И МЕЧТЫ</span>
+        </div>
+        <span class="easter" aria-hidden="true">Э</span>
+      </section>
+    </div>
+
+    <section class="purpose company-section section-pad" id="about" aria-labelledby="purpose-title">
+      <span class="secret-letter" aria-hidden="true">Л</span>
+      <div class="section-heading"><p class="section-kicker">О КОМПАНИИ</p><h2 id="purpose-title">Идея, которая<br><em>нас объединяет</em></h2></div>
+      <div class="purpose-stack" id="purpose">
+        <article class="purpose-card who-card"><p class="card-label">КТО МЫ</p><div class="purpose-copy who-copy"><p>Мы создаём <strong>дополнительный канал продаж</strong> для строительных компаний: привлекаем потенциальных заказчиков, консультируем и сопровождаем их на пути к договору.</p></div><a class="who-link" href="#process" data-section-transition>Как мы работаем</a></article>
+        <article class="purpose-card mission-card"><p class="card-label">МИССИЯ</p><p class="purpose-copy">Соединять <strong class="purpose-highlight">семьи</strong>, мечтающие о своём доме, с <strong class="purpose-highlight">профессионалами</strong>, способными воплотить эту мечту в жизнь, создавая основу для доверия и прочных отношений.</p></article>
+        <article class="purpose-card goal-card"><p class="card-label">ЦЕЛЬ</p><p class="purpose-copy">Помочь строительным компаниям привлекать заказчиков, <strong class="goal-highlight">сохраняя время</strong> для строительства и развития, а также доверие к своему имени.</p></article>
+      </div>
+      <div class="not-us about-not-us"><div><p class="section-kicker">ЧТО ВАЖНО ПОНИМАТЬ</p><h3>Кем мы <span class="heading-negation">не</span> являемся</h3></div><ul class="not-us-list"><li><span class="negation">Не</span> рекламное агентство</li><li><span class="negation">Не</span> агентство лидогенерации</li><li><span class="negation">Не</span> компания по обучению отделов продаж</li><li><span class="negation">Не</span> консалтинговое агентство</li></ul></div>
+    </section>
+
+    <section class="values-section" id="values" aria-labelledby="values-title">
+      <span class="secret-letter" aria-hidden="true">Е</span>
+      <div class="values-stage">
+        <div class="values-header"><p class="section-kicker">НАШИ ПРИНЦИПЫ</p><h2 id="values-title">Ценности, которые<br><em>становятся основой</em></h2></div>
+        <div class="values-cards">
+          <article class="value-card value-a"><div class="value-letter">А</div><div class="value-copy"><h3>Адаптивность</h3><p>У каждой строительной компании свой характер, подход и целевая аудитория. Мы учитываем эти особенности и подстраиваем взаимодействие под партнёра, сохраняя единые принципы честного и уважительного общения.</p></div></article>
+          <article class="value-card value-r"><div class="value-letter">Р</div><div class="value-copy"><h3>Репутация</h3><p>Представляя строительную компанию, мы понимаем: по нашему общению судят и о ней. Поэтому говорим от её имени компетентно, уважительно и опираясь только на подтверждённую информацию.</p></div></article>
+          <article class="value-card value-n"><div class="value-letter">Н</div><div class="value-copy"><h3>Надёжность</h3><p>Соблюдаем договорённости, отвечаем за свою часть работы и остаёмся на связи. Партнёр понимает, что происходит с заказчиком и какие шаги предстоят дальше.</p></div></article>
+          <article class="value-card value-o"><div class="value-letter">О</div><div class="value-copy"><h3>Открытость</h3><p>Говорим честно и прямо. Объясняем свои действия, не скрываем важную информацию и признаём, если какой-то вопрос требует уточнения.</p></div></article>
+        </div>
+        <p class="values-tabu">Доверие начинается с честности: без обмана, преувеличений, навязывания и назойливости.</p>
+      </div>
+    </section>
+
+    <section class="benefits section-pad" id="benefits" aria-labelledby="benefits-title">
+      <span class="secret-letter" aria-hidden="true">М</span>
+      <div class="section-heading"><p class="section-kicker">ПРЕИМУЩЕСТВА</p><h2 id="benefits-title">Возможности для роста.<br><em>Уверенность в каждом шаге</em></h2></div>
+      <div class="benefit-stack">
+        <article class="benefit-card" aria-labelledby="benefit-clients-title"><img class="benefit-art" src="card-qualified-clients-v2.webp" alt=""><div class="benefit-shade" aria-hidden="true"></div><div class="conditions-main"><h3 id="benefit-clients-title">Квалифицированные <em>клиенты</em></h3><p>Привлекаем и фиксируем обращения клиентов, заинтересованных в строительстве и соответствующих согласованным критериям.</p></div><div class="conditions-orb" aria-hidden="true"><span></span></div></article>
+        <article class="benefit-card" aria-labelledby="benefit-time-title"><img class="benefit-art" src="card-time-coherent.webp" alt=""><div class="benefit-shade" aria-hidden="true"></div><div class="conditions-main"><h3 id="benefit-time-title">Больше <em>времени</em></h3><p>Освобождаем ваше время, беря на себя первичное общение и согласованную работу с клиентами.</p></div><div class="conditions-orb" aria-hidden="true"><span></span></div></article>
+        <article class="benefit-card benefit-conditions" id="conditions" aria-labelledby="conditions-title"><img class="benefit-art" src="card-own-investment-v2.webp" alt=""><div class="benefit-shade" aria-hidden="true"></div><div class="conditions-main"><h3 id="conditions-title">Привлечение — <em>за наш счёт</em></h3><p>Мы финансируем привлечение из собственного бюджета. Вам не нужно предварительно оплачивать расходы на рекламу.</p><a class="light-outline" href="#process" data-section-transition>Как мы работаем</a></div><div class="conditions-orb" aria-hidden="true"><span></span></div></article>
+        <article class="benefit-card" id="trust" aria-labelledby="benefit-reputation-title"><span class="secret-letter" aria-hidden="true">Е</span><img class="benefit-art" src="card-reputation-coherent.webp" alt=""><div class="benefit-shade" aria-hidden="true"></div><div class="conditions-main"><h3 id="benefit-reputation-title">Ваша репутация.<br><em>Наша ответственность</em></h3><p>Изучаем подход вашей компании, согласовываем свою роль и используем только подтверждённую информацию. Общаемся с заказчиками деликатно, без давления и преувеличений.</p></div><div class="conditions-orb" aria-hidden="true"><span></span></div></article>
+      </div>
+    </section>
+
+    <section class="service-section section-pad" id="service-section" aria-labelledby="service-title">
+      <span class="secret-letter" aria-hidden="true">Н</span>
+      <div class="section-heading"><p class="section-kicker">УСЛУГИ</p><h2 id="service-title">Модели, которые<br><em>работают на ваш бизнес</em></h2><p class="section-lead">Выбираем формат взаимодействия с учётом задач и возможностей вашей компании.</p></div>
+      <div class="service-stack">
+        <article class="service-panel service-two">
+            <div class="service-bg" aria-hidden="true"></div><div class="service-overlay" aria-hidden="true"></div>
+            <div class="service-content"><p class="card-label">УПРОЩЁННАЯ</p><h3>Квалифицированные<br>встречи</h3><p>Находим подходящих заказчиков, проводим первичную консультацию и организуем встречу. Дальнейшую работу ведёт строительная компания.</p><button type="button" class="service-button" data-dialog="service-two-detail">Об услуге</button></div>
+          </article>
+        <article class="service-panel service-one">
+            <div class="service-bg" aria-hidden="true"></div><div class="service-overlay" aria-hidden="true"></div>
+            <div class="service-content"><p class="card-label">ОСНОВНАЯ</p><h3>Совместные<br>продажи</h3><p>Привлекаем заказчиков за свой рекламный бюджет, консультируем и сопровождаем до заключения договора совместно со строительной компанией.</p><button type="button" class="service-button" data-dialog="service-one-detail">Об услуге</button></div>
+          </article>
+        <article class="service-panel service-three">
+            <div class="service-bg" aria-hidden="true"></div><div class="service-overlay" aria-hidden="true"></div>
+            <div class="service-content"><p class="card-label">РАСШИРЕННАЯ</p><h3>Расширенное<br>сопровождение</h3><p>Полное сопровождение заказчика от привлечения до заключения договора, включая встречи, презентации и переговоры совместно со строительной компанией.</p><button type="button" class="service-button" data-dialog="service-three-detail">Об услуге</button></div>
+          </article>
+        <article class="service-panel service-comparison">
+            <div class="comparison-content">
+              <p class="card-label">СРАВНЕНИЕ МОДЕЛЕЙ</p>
+              <h3>Выберите формат <em>под ваши задачи</em></h3>
+              <div class="comparison-table-wrap" tabindex="0" role="region" aria-label="Таблица сравнения моделей. При необходимости прокрутите таблицу по горизонтали">
+                <table>
+                  <caption class="visually-hidden">Сравнение услуг и оплаты в трёх моделях сотрудничества</caption>
+                  <thead><tr><th scope="col">Что входит</th><th scope="col"><span class="comparison-model comparison-model-two"><span class="comparison-model-type">Упрощённая</span></span></th><th scope="col"><span class="comparison-model comparison-model-one"><span class="comparison-model-type">Основная</span><span class="comparison-recommended">Рекомендуем</span></span></th><th scope="col"><span class="comparison-model comparison-model-three"><span class="comparison-model-type">Расширенная</span></span></th></tr></thead>
+                  <tbody>
+                    <tr><th scope="row">Реклама за наш счёт и привлечение заказчиков</th><td class="comparison-included"><span class="comparison-plus" aria-hidden="true">+</span><span class="visually-hidden">Входит</span></td><td class="comparison-included"><span class="comparison-plus" aria-hidden="true">+</span><span class="visually-hidden">Входит</span></td><td class="comparison-included"><span class="comparison-plus" aria-hidden="true">+</span><span class="visually-hidden">Входит</span></td></tr>
+                    <tr><th scope="row">Консультация и квалификация</th><td class="comparison-included"><span class="comparison-plus" aria-hidden="true">+</span><span class="visually-hidden">Входит</span></td><td class="comparison-included"><span class="comparison-plus" aria-hidden="true">+</span><span class="visually-hidden">Входит</span></td><td class="comparison-included"><span class="comparison-plus" aria-hidden="true">+</span><span class="visually-hidden">Входит</span></td></tr>
+                    <tr><th scope="row">Представление компании и организация встречи</th><td class="comparison-included"><span class="comparison-plus" aria-hidden="true">+</span><span class="visually-hidden">Входит</span></td><td class="comparison-included"><span class="comparison-plus" aria-hidden="true">+</span><span class="visually-hidden">Входит</span></td><td class="comparison-included"><span class="comparison-plus" aria-hidden="true">+</span><span class="visually-hidden">Входит</span></td></tr>
+                    <tr><th scope="row">Передача информации о заказчике</th><td class="comparison-included"><span class="comparison-plus" aria-hidden="true">+</span><span class="visually-hidden">Входит</span></td><td class="comparison-included"><span class="comparison-plus" aria-hidden="true">+</span><span class="visually-hidden">Входит</span></td><td class="comparison-included"><span class="comparison-plus" aria-hidden="true">+</span><span class="visually-hidden">Входит</span></td></tr>
+                    <tr><th scope="row">Поддержка связи с заказчиком после встречи</th><td><span class="visually-hidden">Не входит</span></td><td class="comparison-included"><span class="comparison-plus" aria-hidden="true">+</span><span class="visually-hidden">Входит</span></td><td class="comparison-included"><span class="comparison-plus" aria-hidden="true">+</span><span class="visually-hidden">Входит</span></td></tr>
+                    <tr><th scope="row">Согласование дальнейших шагов</th><td><span class="visually-hidden">Не входит</span></td><td class="comparison-included"><span class="comparison-plus" aria-hidden="true">+</span><span class="visually-hidden">Входит</span></td><td class="comparison-included"><span class="comparison-plus" aria-hidden="true">+</span><span class="visually-hidden">Входит</span></td></tr>
+                    <tr><th scope="row">Сопровождение до заключения договора</th><td><span class="visually-hidden">Не входит</span></td><td class="comparison-included"><span class="comparison-plus" aria-hidden="true">+</span><span class="visually-hidden">Входит</span></td><td class="comparison-included"><span class="comparison-plus" aria-hidden="true">+</span><span class="visually-hidden">Входит</span></td></tr>
+                    <tr><th scope="row">Участие во встречах и переговорах</th><td><span class="visually-hidden">Не входит</span></td><td><span class="visually-hidden">Не входит</span></td><td class="comparison-included"><span class="comparison-plus" aria-hidden="true">+</span><span class="visually-hidden">Входит</span></td></tr>
+                    <tr><th scope="row">Экскурсии по объектам при наличии информации о строительстве</th><td><span class="visually-hidden">Не входит</span></td><td><span class="visually-hidden">Не входит</span></td><td class="comparison-included"><span class="comparison-plus" aria-hidden="true">+</span><span class="visually-hidden">Входит</span></td></tr>
+                  </tbody>
+                  <tfoot>
+                    <tr class="comparison-payment"><th scope="row">Оплата</th><td>Фиксированная оплата за каждую состоявшуюся квалифицированную встречу</td><td>Фиксированная часть за согласованный результат и процент от заключённого договора</td><td>Фиксированная часть за расширенное сопровождение и процент от заключенного договора</td></tr>
+                  </tfoot>
+                </table>
+              </div>
+            </div>
+          </article>
+      </div>
+    </section>
+
+    <section class="process section-pad" id="process" aria-labelledby="process-title">
+      <span class="secret-letter" aria-hidden="true">Т</span>
+      <div class="section-heading"><p class="section-kicker">КОНЦЕПЦИЯ</p><h2 id="process-title">Как мы <em>работаем</em></h2><p class="section-lead">От знакомства с компанией до результата — каждый этап понятен и согласован.</p></div>
+      <div class="process-grid">
+        <article class="process-card"><p class="process-tag">ЗНАКОМСТВО</p><h3>Знакомимся со строительной компанией</h3><p class="process-summary">Изучаем опыт, специализацию, проекты и то, как компания работает с заказчиками.</p><button type="button" class="process-open" data-dialog="step-one">Посмотреть этап</button></article>
+        <article class="process-card"><p class="process-tag">ПРЕДСТАВИТЕЛЬСТВО</p><h3>Согласовываем правила представительства</h3><p class="process-summary">Определяем свою роль, полномочия и информацию, которую можем озвучивать заказчикам.</p><button type="button" class="process-open" data-dialog="step-two">Посмотреть этап</button></article>
+        <article class="process-card"><p class="process-tag">ПРИВЛЕЧЕНИЕ</p><h3>Привлекаем потенциальных заказчиков</h3><p class="process-summary">Привлекаем заказчиков для вашей компании за собственный рекламный бюджет.</p><button type="button" class="process-open" data-dialog="step-three">Посмотреть этап</button></article>
+        <article class="process-card"><p class="process-tag">ОБЩЕНИЕ</p><h3>Работаем с обращениями</h3><p class="process-summary">Выслушиваем заказчика, выясняем его потребности и вместе определяем следующий шаг.</p><button type="button" class="process-open" data-dialog="step-four">Посмотреть этап</button></article>
+        <article class="process-card"><p class="process-tag">ВЗАИМОДЕЙСТВИЕ</p><h3>Передаём клиента и сопровождаем дальнейшее взаимодействие</h3><p class="process-summary">Организуем следующий контакт и остаёмся на связи с заказчиком и партнёром в рамках своей роли.</p><button type="button" class="process-open" data-dialog="step-five">Посмотреть этап</button></article>
+        <article class="process-card"><p class="process-tag">ОБРАТНАЯ СВЯЗЬ</p><h3>Фиксируем результат и обратную связь</h3><p class="process-summary">Подводим итоги взаимодействия и обсуждаем, что можно улучшить в совместной работе.</p><button type="button" class="process-open" data-dialog="step-six">Посмотреть этап</button></article>
+      </div>
+    </section>
+
+    <section class="case-section section-pad" id="cases" aria-labelledby="cases-title">
+      <span class="secret-letter" aria-hidden="true">А</span>
+      <div class="section-heading"><p class="section-kicker">КЕЙСЫ</p><h2 id="cases-title">Доверие начинается<br><em>с конкретных цифр</em></h2></div>
+      <div class="case-layout">
+        <div class="case-copy">
+          <p class="case-year">2026</p>
+          <h3>Привлечение заказчиков для СК «Домакс»</h3>
+          <p>С марта по сентябрь 2026 года привлекали потенциальных заказчиков на строительство домов, проводили первичные консультации, выясняли запросы и организовывали встречи с представителем компании. Встречи и основное дальнейшее общение с заказчиками проводил представитель «Домакс».</p>
+        </div>
+        <div class="case-metrics">
+          <div class="case-metric"><strong>7</strong><span>семей заключили договоры со строительной компанией</span></div>
+          <div class="case-metric"><strong>19</strong><span>проведённых встреч с потенциальными заказчиками</span></div>
+          <div class="case-metric"><strong>37%</strong><span>конверсия встреч в заключённые договоры</span></div>
+          <div class="case-metric"><strong>&gt;50</strong><span>млн рублей — общая стоимость заключённых договоров</span></div>
+        </div>
+      </div>
+      <span class="secret-letter case-secret-extra" aria-hidden="true">Р</span>
+    </section>
+
+    <section class="faq section-pad" id="faq" aria-labelledby="faq-title">
+      <span class="secret-letter" aria-hidden="true">Н</span>
+      <div class="faq-layout"><div><p class="section-kicker">ПОЛЕЗНО ЗНАТЬ</p><h2 id="faq-title">Ответы на<br><em>ваши вопросы</em></h2></div><div class="faq-list">
+        <details><summary>Что считается квалифицированным клиентом?<span></span></summary><p>Это потенциальный заказчик, чей запрос соответствует заранее согласованным критериям вашей компании. При знакомстве можем обсудить регион, тип дома, бюджет, сроки и готовность к следующему шагу. Обязательные критерии определяем вместе и уточняем доступную информацию в разговоре с заказчиком.</p></details>
+        <details><summary>Что считается квалифицированной встречей?<span></span></summary><p>Это состоявшаяся встреча представителя вашей компании с заказчиком, который соответствует согласованным критериям. До старта договариваемся, как подтверждается встреча и как учитываются переносы или отмены.</p></details>
+        <details><summary>Кто оплачивает рекламу?<span></span></summary><p>Мы привлекаем заказчиков за счёт собственного рекламного бюджета. Предварительно оплачивать рекламу этого канала строительной компании не нужно.</p></details>
+        <details><summary>Как вы представляете нашу компанию?<span></span></summary><p>До начала работы изучаем вашу компанию и согласовываем свою роль, полномочия и информацию, которую можем озвучивать заказчикам.</p></details>
+        <details><summary>Что происходит после передачи заказчика?<span></span></summary><p>Это зависит от выбранной модели. Мы можем организовать квалифицированную встречу для вашей команды или продолжать сопровождение взаимодействия до договора совместно с ней.</p></details>
+        <details><summary>Подойдёт ли сотрудничество, если у нас уже есть отдел продаж?<span></span></summary><p>Да. Мы можем стать дополнительным каналом привлечения и согласовать взаимодействие с вашей командой.</p></details>
+        <details><summary>Как фиксируются передача заказчика и результат?<span></span></summary><p>До старта согласовываем, какую информацию фиксируем при передаче, как подтверждаем состоявшиеся встречи и отслеживаем заключённые договоры. Порядок сверки результатов определяем вместе.</p></details>
+        <details><summary>Как учитываются заказчики, уже знакомые нашей компании?<span></span></summary><p>Заранее согласовываем, как проверять повторные обращения и клиентов из вашей базы, а также в каких случаях результат учитывается в рамках сотрудничества.</p></details>
+        <details><summary>Что будет, если заказчик перенесёт или отменит встречу?<span></span></summary><p>Порядок переноса, повторного назначения и учёта таких встреч обсуждаем до начала работы. Условия оплаты привязываем к согласованному результату.</p></details>
+        <details><summary>Как определяются условия оплаты?<span></span></summary><p>Условия зависят от выбранной модели. Результат, критерии и порядок оплаты согласовываются с партнёром до начала работы.</p></details>
+        <details><summary>Можно ли гарантировать количество договоров?<span></span></summary><p>Количество договоров зависит от спроса, предложения строительной компании и работы с заказчиками. Мы согласовываем критерии и отслеживаем результаты, но заранее не обещаем определённое число сделок.</p></details>
+      </div></div>
+    </section>
+
+    <section class="final-section" id="contact" aria-labelledby="final-title">
+      <span class="secret-letter" aria-hidden="true">О</span><div class="final-glow" aria-hidden="true"></div>
+      <p id="final-title">С нами всё становится</p>
+      <div class="final-word" aria-label="ЭЛЕМЕНТАРНО"><span>Э</span><span>Л</span><span>Е</span><span>М</span><span>Е</span><span>Н</span><span>Т</span><span>А</span><span>Р</span><span>Н</span><span>О</span></div>
+      <div class="final-contact"><a class="final-contact-call" href="tel:+79027427832">ОБСУДИМ СОТРУДНИЧЕСТВО</a></div>
+      <footer class="site-footer" aria-label="Контакты и навигация">
+        <div class="footer-identity">
+          <a class="brand" href="#top" aria-label="Элемент Арно — наверх"><span class="brand-logo" aria-hidden="true"><span class="brand-word brand-element">ЭЛЕМЕНТ</span><span class="brand-symbol"></span><span class="brand-word brand-arno">АРНО</span></span></a>
+          <p>Внешний канал продаж для строительных компаний</p>
+        </div>
+        <nav class="footer-nav" aria-label="Разделы сайта">
+          <p class="footer-caption">Навигация</p>
+          <div class="footer-links">
+            <a href="#about" data-section-transition>О компании</a>
+            <a href="#benefits" data-section-transition>Преимущества</a>
+            <a href="#service-section" data-section-transition>Услуги</a>
+            <a href="#process" data-section-transition>Концепция</a>
+            <a href="#cases" data-section-transition>Кейсы</a>
+            <a href="#faq" data-section-transition>Вопросы</a>
+          </div>
+        </nav>
+        <address class="footer-contacts">
+          <p class="footer-caption">Связаться</p>
+          <a href="tel:+79027427832">+7 (902) 742-78-32</a>
+          <a href="mailto:alimovnikita63@gmail.com">alimovnikita63@gmail.com</a>
+          <a href="https://t.me/nikita_a88" target="_blank" rel="noopener noreferrer">Telegram</a>
+        </address>
+        <p class="footer-tagline">СОЕДИНЯЯ ВОЗМОЖНОСТИ И МЕЧТЫ</p>
+      </footer>
+    </section>
+  </main>
+  <dialog id="details" aria-labelledby="dialog-title">
+    <div class="dialog-inner"><div class="dialog-top"><span class="brand-logo dialog-brand" role="img" aria-label="Элемент Арно"><span class="brand-word brand-element">ЭЛЕМЕНТ</span><span class="brand-symbol" aria-hidden="true"></span><span class="brand-word brand-arno">АРНО</span></span><button class="dialog-close" type="button" aria-label="Закрыть">×</button></div><div id="dialog-body"></div></div>
+  </dialog>
+  <template id="approach"><p class="dialog-kicker">НАШ ПОДХОД</p><h2 id="dialog-title">Как мы работаем</h2><ol class="steps"><li>Знакомимся со строительной компанией</li><li>Согласовываем правила представительства</li><li>Привлекаем потенциальных заказчиков</li><li>Работаем с обращениями</li><li>Передаём клиента и сопровождаем дальнейшее взаимодействие</li><li>Фиксируем результат и обратную связь</li></ol><p class="dialog-note">Формат взаимодействия и распределение задач согласовываем с партнёром.</p></template>
+  <template id="services"><p class="dialog-kicker">МОДЕЛИ СОТРУДНИЧЕСТВА</p><h2 id="dialog-title">Наши услуги</h2><div class="service"><h3>Совместные продажи</h3><p>Привлекаем, консультируем и сопровождаем заказчиков до договора совместно со строительной компанией.</p></div><div class="service"><h3>Квалифицированные встречи</h3><p>Находим подходящих заказчиков, проводим первичную консультацию и организуем встречу.</p></div><div class="service"><h3>Расширенное сопровождение</h3><p>Расширенная модель с более глубоким участием во встречах, презентациях и переговорах.</p></div></template>
+  <template id="terms"><p class="dialog-kicker">ОТКРЫТО О СОТРУДНИЧЕСТВЕ</p><h2 id="dialog-title">Условия сотрудничества</h2><p>Мы привлекаем потенциальных заказчиков за счёт собственного рекламного бюджета. Строительной компании не нужно предварительно финансировать рекламу этого канала.</p><p>Формат работы, критерии результата и условия оплаты услуг согласовываются отдельно.</p></template>
+  <template id="service-one-detail">
+    <p class="dialog-kicker service-model-label">ОСНОВНАЯ</p><h2 id="dialog-title" class="visually-hidden">Совместные продажи</h2>
+    <div class="service-details">
+      <section><h3>Для кого подходит</h3><p>Для строительных компаний, которым нужна поддержка в работе с заказчиком от первого обращения до заключения договора совместно с их командой.</p></section>
+      <section><h3>Что делаем</h3><p>Финансируем рекламу, привлекаем и квалифицируем заказчиков, консультируем, организуем встречи и сопровождаем дальнейшее взаимодействие до договора в согласованной роли.</p></section>
+      <section><h3>Как устроена оплата</h3><p>Фиксированная часть за согласованный результат и процент от заключённого договора. Критерии результата и условия оплаты определяем до начала работы.</p></section>
+    </div>
+  </template>
+  <template id="service-two-detail">
+    <p class="dialog-kicker service-model-label">УПРОЩЁННАЯ</p><h2 id="dialog-title" class="visually-hidden">Квалифицированные встречи</h2>
+    <div class="service-details">
+      <section><h3>Для кого подходит</h3><p>Для компаний, чья команда самостоятельно проводит встречи и ведёт последующую продажу, но нуждается в подходящих заказчиках.</p></section>
+      <section><h3>Что делаем</h3><p>Привлекаем заказчиков за свой рекламный бюджет, проводим первичную консультацию, сверяем запрос с согласованными критериями и организуем встречу с вашей командой.</p></section>
+      <section><h3>Как устроена оплата</h3><p>Фиксированная оплата за каждую состоявшуюся квалифицированную встречу. Критерии встречи и порядок её подтверждения согласовываем до начала работы.</p></section>
+    </div>
+  </template>
+  <template id="service-three-detail">
+    <p class="dialog-kicker service-model-label">РАСШИРЕННАЯ</p><h2 id="dialog-title" class="visually-hidden">Расширенное сопровождение</h2>
+    <div class="service-details">
+      <section><h3>Для кого подходит</h3><p>Для компаний, которым требуется более глубокое участие в общении с заказчиками, встречах и переговорах.</p></section>
+      <section><h3>Что делаем</h3><p>Предусмотрены привлечение заказчиков за наш счёт, первичные консультации, квалификация, организация встреч и сопровождение до заключения договора. Также предполагается более глубокое участие во встречах, презентациях и переговорах. Экскурсии по объектам проводим после изучения необходимой информации о том, как и из каких материалов строился дом и почему были приняты те или иные решения. Объём участия определяем вместе.</p></section>
+      <section><h3>Как устроена оплата</h3><p>Фиксированная часть за согласованный объём расширенного сопровождения и процент от стоимости заключённого договора. Размер и порядок оплаты определяем до начала работы.</p></section>
+    </div>
+  </template>
+  <template id="step-one"><h2 id="dialog-title" class="dialog-kicker">Знакомимся со строительной компанией</h2><p>Чтобы достойно представлять компанию, разбираемся в её опыте, продукте и подходе.</p><ul><li>Знакомимся с собственником и участниками работы с заказчиками.</li><li>Изучаем историю, опыт, специализацию и реализованные проекты.</li><li>Разбираемся, какие дома строит компания, с какими материалами работает и какие услуги предлагает.</li><li>Узнаём её подход к строительству и общению с заказчиками.</li><li>Изучаем доступные проекты, фотографии и материалы.</li><li>При расширенной модели получаем от компании и изучаем сведения об этапах строительства объектов, использованных материалах и причинах принятых решений, чтобы подробно и достоверно рассказывать об объектах на экскурсиях.</li><li>Обсуждаем подходящих заказчиков и проекты, а также те, за которые компания не берётся.</li><li>Выясняем, как проходят встречи, расчёт стоимости и заключение договора.</li><li>Уточняем географию работы и возможности по приёму новых заказов.</li></ul></template>
+  <template id="step-two"><h2 id="dialog-title" class="dialog-kicker">Согласовываем правила представительства</h2><p>Определяем, как мы позиционируем себя при общении с заказчиками и какие полномочия получаем.</p><ul><li>Согласовываем свою роль и формат представительства компании.</li><li>Определяем позиционирование при первом контакте и на следующих этапах.</li><li>Обсуждаем стиль общения, соответствующий характеру и уровню сервиса партнёра.</li><li>Согласовываем, что можем самостоятельно озвучивать: услуги, особенности работы, ориентиры по стоимости и другим условиям, специальные предложения и скидки.</li><li>Определяем вопросы, требующие уточнения у представителя компании.</li><li>Договариваемся об организации встреч, передаче информации и обратной связи.</li><li>Закрепляем договорённости и необходимые полномочия.</li></ul></template>
+  <template id="step-three"><h2 id="dialog-title" class="dialog-kicker">Привлекаем потенциальных заказчиков</h2><p>Создаём дополнительный канал привлечения клиентов, которые заинтересованы в строительстве дома с нашим партнёром.</p><ul><li>Определяем подходящих заказчиков с учётом специализации и возможностей компании.</li><li>Формируем предложение на основе согласованной информации о партнёре.</li><li>Подбираем каналы и материалы для привлечения.</li><li>Организуем рекламу и первичный приём обращений.</li><li>Финансируем рекламу канала из собственного бюджета.</li><li>Оцениваем отклик и при необходимости корректируем материалы и подход.</li></ul></template>
+  <template id="step-four"><h2 id="dialog-title" class="dialog-kicker">Работаем с обращениями</h2><p>Помогаем человеку спокойно разобраться в своём запросе и понять, подходит ли ему предложение компании.</p><ul><li>Связываемся с заказчиком и внимательно его выслушиваем.</li><li>Выясняем, какой дом он хочет построить и что для него важно.</li><li>Уточняем основные параметры проекта и стадию подготовки.</li><li>Рассказываем о возможностях компании в рамках согласованной информации.</li><li>Отвечаем на вопросы или уточняем ответы у партнёра.</li><li>Обсуждаем следующий шаг: встречу, экскурсию или консультацию.</li></ul></template>
+  <template id="step-five"><h2 id="dialog-title" class="dialog-kicker">Передаём клиента и сопровождаем дальнейшее взаимодействие</h2><p>Когда заказчик готов к следующему шагу, организуем взаимодействие и остаёмся на связи в рамках своей роли.</p><ul><li>Согласовываем формат следующего контакта.</li><li>Передаём партнёру информацию для подготовки к разговору.</li><li>Помогаем с организационными вопросами и при необходимости участвуем во встрече.</li><li>Остаёмся на связи с заказчиком и представителем компании.</li><li>Помогаем сохранять непрерывность общения и согласовывать дальнейшие шаги.</li><li>Участвуем в сопровождении до договора в определённом с партнёром формате.</li></ul></template>
+  <template id="step-six"><h2 id="dialog-title" class="dialog-kicker">Фиксируем результат и обратную связь</h2><p>Подводим итоги работы с привлечённым заказчиком и сохраняем информацию для прозрачного сотрудничества.</p><ul><li>Фиксируем состоявшиеся встречи и другие согласованные результаты.</li><li>Получаем обратную связь по итогам общения с заказчиком.</li><li>Уточняем, чем завершилось взаимодействие и требуется ли наше участие.</li><li>Обсуждаем, что можно улучшить в привлечении, общении и взаимодействии.</li><li>Используем обратную связь для корректировки дальнейшей работы.</li></ul></template>
+  <audio id="nature" src="birds.mp3" preload="auto" playsinline loop></audio>
+</body>
+</html>
