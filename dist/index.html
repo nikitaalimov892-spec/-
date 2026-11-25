@@ -16,6 +16,8 @@
   <script src="main.js?v=sound-auto-20261124" defer></script>
   <script src="water.js" defer></script>
   <script src="sections.js" defer></script>
+  <link rel="stylesheet" href="contact.css">
+  <script src="contact.js" defer></script>
 </head>
 <body>
   <a class="skip-link" href="#main-content">Перейти к содержанию</a>
@@ -61,7 +63,7 @@
           <h1 id="hero-title"><span class="hero-heading-line">Вы воплощаете мечты</span> <span class="hero-heading-line">о доме</span> <span class="hero-heading-line hero-highlight">Мы помогаем находить тех,</span> <span class="hero-heading-line hero-highlight">кто о нём мечтает</span></h1>
           <p class="hero-description"><span>Привлекаем и сопровождаем потенциальных заказчиков для строительных компаний.</span> <span>Рекламу финансируем из собственного бюджета.</span></p>
           <div class="actions">
-            <a class="button button-primary hero-contact" href="tel:+79027427832"><span>Обсудить сотрудничество</span></a>
+            <button type="button" class="button button-primary hero-contact" data-contact aria-haspopup="dialog" aria-controls="contact-dialog"><span>Обсудить сотрудничество</span></button>
           </div>
         </div>
         <div class="hero-bottom">
@@ -205,7 +207,7 @@
       <span class="secret-letter" aria-hidden="true">О</span><div class="final-glow" aria-hidden="true"></div>
       <p id="final-title">С нами всё становится</p>
       <div class="final-word" aria-label="ЭЛЕМЕНТАРНО"><span>Э</span><span>Л</span><span>Е</span><span>М</span><span>Е</span><span>Н</span><span>Т</span><span>А</span><span>Р</span><span>Н</span><span>О</span></div>
-      <div class="final-contact"><a class="final-contact-call" href="tel:+79027427832">ОБСУДИМ СОТРУДНИЧЕСТВО</a></div>
+      <div class="final-contact"><button type="button" class="final-contact-call" data-contact aria-haspopup="dialog" aria-controls="contact-dialog">ОБСУДИМ СОТРУДНИЧЕСТВО</button></div>
       <footer class="site-footer" aria-label="Контакты и навигация">
         <div class="footer-identity">
           <a class="brand" href="#top" aria-label="Элемент Арно — наверх"><span class="brand-logo" aria-hidden="true"><span class="brand-word brand-element">ЭЛЕМЕНТ</span><span class="brand-symbol"></span><span class="brand-word brand-arno">АРНО</span></span></a>
@@ -236,6 +238,19 @@
       </footer>
     </section>
   </main>
+  <dialog id="contact-dialog" aria-labelledby="contact-title" aria-describedby="contact-description">
+    <div class="contact-inner">
+      <button type="button" class="contact-close" aria-label="Закрыть окно связи">×</button>
+      <h2 id="contact-title">Обсудим сотрудничество?</h2>
+      <p id="contact-description">Выберите удобный для вас способ связи</p>
+      <div class="contact-options">
+        <a class="contact-phone" href="tel:+79027427832" autofocus><span>Позвонить</span><strong>+7 (902) 742-78-32</strong></a>
+        <a class="contact-telegram" href="https://t.me/nikita_a88" target="_blank" rel="noopener noreferrer">Написать в Telegram</a>
+      </div>
+      <button type="button" class="contact-copy">Скопировать номер телефона</button>
+      <p class="contact-status" role="status" aria-live="polite" aria-atomic="true"></p>
+    </div>
+  </dialog>
   <dialog id="details" aria-labelledby="dialog-title">
     <div class="dialog-inner"><div class="dialog-top"><span class="brand-logo dialog-brand" role="img" aria-label="Элемент Арно"><span class="brand-word brand-element">ЭЛЕМЕНТ</span><span class="brand-symbol" aria-hidden="true"></span><span class="brand-word brand-arno">АРНО</span></span><button class="dialog-close" type="button" aria-label="Закрыть">×</button></div><div id="dialog-body"></div></div>
   </dialog>

@@ -1,0 +1,80 @@
+.final-contact-call[data-contact] {
+  padding: 0;
+  border: 0;
+  border-bottom: 1px solid rgba(211,179,147,.6);
+  background: transparent;
+}
+#contact-dialog {
+  width: min(540px, calc(100% - 2rem));
+  max-width: none;
+  max-height: calc(100dvh - 2rem);
+  overscroll-behavior: contain;
+  animation: contact-enter .22s ease both;
+}
+#contact-dialog::backdrop {
+  background: rgba(12,12,10,.6);
+  backdrop-filter: none;
+  animation: contact-backdrop .22s ease both;
+}
+#contact-dialog.is-closing { animation: contact-leave .16s ease both; }
+#contact-dialog.is-closing::backdrop { animation: contact-backdrop .16s ease reverse both; }
+.contact-inner { position: relative; padding: 3.5rem 2rem 1.25rem; }
+.contact-close {
+  position: absolute;
+  top: .5rem;
+  right: .5rem;
+  width: 44px;
+  height: 44px;
+  padding: 0;
+  border: 0;
+  background: transparent;
+  color: #282722;
+  font-size: 2rem;
+}
+#contact-title {
+  margin: 0 0 1rem;
+  font-family: ArnoDisplay, 'Segoe UI', sans-serif;
+  font-weight: 400;
+  font-size: clamp(1.7rem, 5vw, 2.35rem);
+  line-height: 1.15;
+  letter-spacing: -.04em;
+}
+#contact-description { margin: 0 0 1.8rem; line-height: 1.5; color: #5c5851; }
+.contact-options { display: grid; gap: .75rem; }
+.contact-options a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  min-height: 52px;
+  padding: .85rem 1rem;
+  border: 1px solid #a3937f;
+  border-radius: 3px;
+  text-align: center;
+  line-height: 1.5;
+}
+.contact-phone { background: #29261f; color: #f5f2ea; }
+.contact-phone strong { font-size: 1.15rem; font-weight: 400; }
+.contact-phone:hover { background: #40382b; }
+.contact-telegram { color: #282722; }
+.contact-telegram:hover { background: #e1d8ca; }
+.contact-copy {
+  display: block;
+  margin: .75rem auto 0;
+  min-height: 44px;
+  border: 0;
+  padding: .5rem .25rem;
+  background: transparent;
+  color: #5e4735;
+  text-decoration: underline;
+  text-underline-offset: .2em;
+}
+.contact-status { min-height: 3em; margin: .25rem 0 0; text-align: center; font-size: .875rem; line-height: 1.5; color: #5c5851; }
+#contact-dialog :focus-visible { outline: 2px solid #80624b; outline-offset: 3px; }
+@keyframes contact-enter { from { opacity: 0; transform: translateY(10px); } to { opacity: 1; transform: translateY(0); } }
+@keyframes contact-leave { to { opacity: 0; transform: translateY(8px); } }
+@keyframes contact-backdrop { from { opacity: 0; } to { opacity: 1; } }
+@media (max-width: 480px) { .contact-inner { padding: 3.5rem 1.25rem 1rem; } }
+@media (prefers-reduced-motion: reduce) {
+  #contact-dialog, #contact-dialog::backdrop { animation: none !important; }
+}
