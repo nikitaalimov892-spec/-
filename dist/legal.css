@@ -1,0 +1,100 @@
+@font-face {
+  font-family: Arno;
+  src: url("noto-sans-display.ttf") format("truetype");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  color-scheme: light;
+}
+
+body {
+  margin: 0;
+  background: #ece8e0;
+  color: #282722;
+  font-family: Arno, "Segoe UI", Arial, sans-serif;
+  line-height: 1.7;
+}
+
+.legal-page {
+  width: min(100% - 3rem, 800px);
+  margin: 0 auto;
+  padding: 2rem 0 4rem;
+}
+
+a {
+  color: #6d503a;
+  text-underline-offset: .2em;
+  overflow-wrap: anywhere;
+}
+
+a:hover {
+  color: #282722;
+}
+
+a:focus-visible {
+  outline: 2px solid #82664e;
+  outline-offset: 4px;
+}
+
+.back-link,
+.legal-links a {
+  display: inline-flex;
+  align-items: center;
+  min-height: 44px;
+}
+
+h1 {
+  margin: 2rem 0 1rem;
+  font-size: clamp(1.8rem, 5vw, 3rem);
+  font-weight: 400;
+  letter-spacing: -.04em;
+  line-height: 1.15;
+  overflow-wrap: anywhere;
+}
+
+h2 {
+  margin: 2rem 0 .75rem;
+  font-size: 1.25rem;
+  font-weight: 400;
+  line-height: 1.4;
+}
+
+p {
+  margin: .75rem 0;
+}
+
+.document-date {
+  color: #625b51;
+  font-size: .875rem;
+}
+
+dl {
+  margin: 2rem 0;
+}
+
+dt {
+  margin-top: 1.25rem;
+  color: #625b51;
+  font-size: .875rem;
+}
+
+dd {
+  margin: .25rem 0 0;
+  overflow-wrap: anywhere;
+}
+
+.legal-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: .5rem 2rem;
+  margin-top: 3rem;
+  padding-top: 1.25rem;
+  border-top: 1px solid #c9c1b5;
+}

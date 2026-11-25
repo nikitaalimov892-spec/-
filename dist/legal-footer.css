@@ -1,0 +1,33 @@
+.site-footer .legal-footer {
+  grid-column: 1 / -1;
+  display: flex;
+  flex-wrap: wrap;
+  gap: .25rem 1.8rem;
+}
+
+.legal-footer a {
+  display: inline-flex;
+  align-items: center;
+  min-height: 44px;
+  max-width: 100%;
+  padding: .3rem 0;
+  color: #afa79d;
+  font-size: .875rem;
+  line-height: 1.5;
+  text-decoration: underline;
+  text-decoration-color: rgba(175, 167, 157, .4);
+  text-underline-offset: .2em;
+  overflow-wrap: anywhere;
+}
+
+.legal-footer a:hover,
+.legal-footer a:focus-visible {
+  color: #eee6dc;
+  text-decoration-color: currentColor;
+}
+
+@media (max-width: 680px) {
+  .site-footer .legal-footer {
+    padding-right: 3.5rem;
+  }
+}
