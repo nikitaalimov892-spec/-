@@ -1,4 +1,4 @@
-@font-face{font-family:Arno;src:url('noto-sans-display.ttf') format('truetype');font-style:normal;font-weight:400;font-display:swap}
+@font-face{font-family:Arno;src:url('noto-sans-display.woff2') format('woff2');font-style:normal;font-weight:400;font-display:swap}
 :root{color-scheme:dark;--ivory:#f5f2ea;--muted:rgba(250,247,238,.76);--gold:#d8b58a;--black:#171713}
 *{box-sizing:border-box}
 html{scroll-behavior:smooth}
@@ -26,7 +26,7 @@ dialog{max-width:min(700px,calc(100% - 2rem));max-height:min(85vh,850px);padding
 @media(prefers-reduced-motion:reduce){*,*::before,*::after{animation-duration:.01ms!important;animation-iteration-count:1!important;scroll-behavior:auto!important;transition-duration:.01ms!important}.hero-spacer{height:100svh}}
 
 /* The display face keeps Russian text legible and the line breaks predictable. */
-@font-face{font-family:ArnoDisplay;src:url('noto-sans-display.ttf') format('truetype');font-display:swap;font-weight:400}
+@font-face{font-family:ArnoDisplay;src:url('noto-sans-display.woff2') format('woff2');font-display:swap;font-weight:400}
 h1{font-family:ArnoDisplay,'Segoe UI',Arial,sans-serif}
 .title-line{display:block;white-space:nowrap}
 h1 em{display:block}
@@ -47,3 +47,9 @@ dialog[open] #dialog-body{animation:dialog-content .5s .05s cubic-bezier(.22,1,.
 @keyframes dialog-backdrop{from{opacity:0}to{opacity:1}}
 @keyframes dialog-content{from{opacity:0;transform:translateY(8px)}to{opacity:1;transform:translateY(0)}}
 @media(prefers-reduced-motion:reduce){dialog[open]::backdrop{animation:none!important}}
+
+/* Reserve the hero's minimum height when a short viewport reduces its spacer. */
+.hero-spacer { min-height: 620px; }
+@media (max-width: 680px) {
+  .hero-spacer { min-height: 600px; }
+}
