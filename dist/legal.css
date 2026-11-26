@@ -1,6 +1,7 @@
 @font-face {
   font-family: Arno;
-  src: url("noto-sans-display.ttf") format("truetype");
+  src: url("noto-sans-display.woff2") format("woff2"),
+       url("noto-sans-display.ttf") format("truetype");
   font-weight: 400;
   font-style: normal;
   font-display: swap;

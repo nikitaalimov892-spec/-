@@ -88,7 +88,52 @@
   });
   toggle.addEventListener('click',()=>{const open=menu.hidden;menu.hidden=!open;toggle.setAttribute('aria-expanded',String(open));toggle.setAttribute('aria-label',open?'Закрыть меню':'Открыть меню')});
   menu.querySelectorAll('a').forEach(link=>link.addEventListener('click',closeMenu));
-  document.querySelectorAll('[data-dialog]').forEach(btn=>btn.addEventListener('click',()=>{closeMenu();body.replaceChildren(document.getElementById(btn.dataset.dialog).content.cloneNode(true));dialog.showModal()}));
-  document.querySelector('.dialog-close').addEventListener('click',()=>dialog.close());
-  dialog.addEventListener('click',e=>{if(e.target===dialog)dialog.close()});
+  let detailsTrigger=null, detailsScroll=null;
+  document.querySelector('.service-stack').addEventListener('focusin',event=>{
+    const button=event.target;
+    if(detailsScroll || !button.matches('.service-button:focus-visible'))return;
+    // Wait for the focused card's normal-flow geometry before aligning it.
+    requestAnimationFrame(()=>{
+      if(document.activeElement===button){
+        // Cancel any pending smooth scroll from the previously focused table.
+        window.scrollTo({left:window.scrollX,top:window.scrollY,behavior:'instant'});
+        button.scrollIntoView({behavior:'instant',block:'center'});
+      }
+    });
+  });
+  document.querySelectorAll('[data-dialog]').forEach(btn=>btn.addEventListener('click',()=>{
+    if(dialog.open)return;
+    closeMenu();
+    body.replaceChildren(document.getElementById(btn.dataset.dialog).content.cloneNode(true));
+    detailsTrigger=btn;
+    const root=document.documentElement;
+    detailsScroll={x:window.scrollX,y:window.scrollY,overflow:root.style.overflow,padding:document.body.style.paddingRight};
+    const scrollbar=window.innerWidth-root.clientWidth;
+    const padding=parseFloat(getComputedStyle(document.body).paddingRight);
+    root.style.overflow='hidden';
+    document.body.style.paddingRight=padding+scrollbar+'px';
+    window.scrollTo({left:detailsScroll.x,top:detailsScroll.y,behavior:'instant'});
+    dialog.showModal();
+    dialog.scrollTop=0;
+  }));
+  function restoreDetails(){
+    if(!detailsScroll)return;
+    const saved=detailsScroll;
+    detailsScroll=null;
+    document.documentElement.style.overflow=saved.overflow;
+    document.body.style.paddingRight=saved.padding;
+    if(document.activeElement===document.body || dialog.contains(document.activeElement)){
+      detailsTrigger?.focus({preventScroll:true});
+    }
+    window.scrollTo({left:saved.x,top:saved.y,behavior:'instant'});
+  }
+  function closeDetails(){
+    dialog.close();
+    // Restore now, before a subsequent Tab; native close is dispatched later.
+    restoreDetails();
+  }
+  dialog.addEventListener('close',()=>{if(!dialog.open)restoreDetails()});
+  dialog.addEventListener('cancel',event=>{event.preventDefault();closeDetails()});
+  document.querySelector('.dialog-close').addEventListener('click',closeDetails);
+  dialog.addEventListener('click',e=>{if(e.target===dialog)closeDetails()});
 })();
